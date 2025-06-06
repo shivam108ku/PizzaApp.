@@ -1,4 +1,3 @@
-
 {
   "name": "codergyan",
   "version": "1.0.0",
@@ -12,7 +11,7 @@
     "format:check": "prettier . --check",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint .",
-    "dev": "node src/index.js",
+    "dev": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
@@ -26,7 +25,13 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.1"
   },
-  "lint-staged":{
-    "*.ts": ["npm run format:fix", "npm run lint:fix"]
+  "lint-staged": {
+    "*.ts": [
+      "npm run format:fix",
+      "npm run lint:fix"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
